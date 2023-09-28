@@ -26,12 +26,7 @@
     "moduleResolution": "node",
     "incremental": true
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.d.ts",
-    "**/*.js",
-    "**/*.jsx",
-  ],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts", "**/*.js", "**/*.jsx"],
+  "files": ["src/types.d.ts"],
   "exclude": ["node_modules"]
 }
