@@ -1,7 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
-import { createPortal } from 'react-dom';
+import React from 'react';
 
 interface IModalProps {
   isOpen: boolean;
@@ -11,13 +10,8 @@ interface IModalProps {
 }
 
 function Modal({ isOpen, className, onClose, children }: IModalProps) {
-  useEffect(() => {
-    // eslint-disable-next-line no-console
-    console.log('Finished load modal');
-  }, []);
-
-  return createPortal(
-    <section
+  return (
+    <div
       className={`flex justify-center fixed inset-0 w-full h-full bg-black bg-opacity-50 z-50 pt-[5%] ${
         isOpen ? 'visible' : 'invisible'
       }`}
@@ -31,8 +25,7 @@ function Modal({ isOpen, className, onClose, children }: IModalProps) {
         </button>
         {children}
       </div>
-    </section>,
-    document.querySelector('body') as HTMLBodyElement
+    </div>
   );
 }
 
