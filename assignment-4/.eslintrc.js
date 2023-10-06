@@ -4,15 +4,12 @@ module.exports = {
     './node_modules/@dwarvesf/react-eslint-config',
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:prettier/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     'next',
     'next/core-web-vitals',
   ],
-  ignorePatterns: [
-    'node_modules/',
-  ],
+  ignorePatterns: ['node_modules/'],
   env: {
     es6: true,
     browser: true,
@@ -47,4 +44,4 @@ module.exports = {
       },
     },
   ],
-}
+};
