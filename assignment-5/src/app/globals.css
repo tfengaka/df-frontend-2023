@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  table,
+  th,
+  td {
+    @apply border-2 border-stroke;
+  }
+  table th,
+  table td {
+    @apply px-4 py-2 text-secondary text-base font-semibold;
+  }
+  table td:nth-child(2),
+  table td:nth-child(4),
+  table td:last-child {
+    @apply w-[15%];
+  }
+  table th {
+    @apply text-center font-bold text-[#333];
+  }
+}

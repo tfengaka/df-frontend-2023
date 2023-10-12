@@ -1,0 +1,54 @@
+{
+	"extends": ["./node_modules/@dwarvesf/react-eslint-config"],
+	"env": {
+		"es6": true,
+		"browser": true,
+		"node": true,
+		"jest": true
+	},
+	"globals": {
+		"io": true,
+		"chrome": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 10,
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"project": ["./tsconfig.json"],
+		"createDefaultProgram": true,
+		"sourceType": "module"
+	},
+	"settings": {
+		"import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+		"import/parsers": {
+			"@typescript-eslint/parser": [".ts", ".tsx"]
+		},
+		"import/resolver": {
+			"typescript": {
+				"directory": "./tsconfig.json"
+			},
+			"node": {
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
+			}
+		}
+	},
+	"rules": {
+		"react/react-in-jsx-scope": "off",
+		"@typescript-eslint/no-explicit-any": "off",
+		"jsx-a11y/click-events-have-key-events": "off",
+		"jsx-a11y/no-static-element-interactions": "off",
+		"react/jsx-no-target-blank": "warn"
+	},
+	"overrides": [
+		{
+			"files": ["**/*.ts?(x)", "**/*.js?(x)"],
+			"rules": {
+				"react/react-in-jsx-scope": "off",
+				"react/jsx-sort-props": "off",
+				"react/function-component-definition": "off",
+				"no-shadow": "off"
+			}
+		}
+	]
+}
