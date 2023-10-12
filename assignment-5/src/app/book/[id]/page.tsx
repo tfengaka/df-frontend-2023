@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import DeleteBook from '~/components/DeleteBook';
 import EditBook from '~/components/EditBook';
 import { useBookContext } from '~/context/BookContext';
